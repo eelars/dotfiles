@@ -1,0 +1,35 @@
+#include ".Xresources.d/breezie"
+
+!fonts
+Xft.dpi: 96
+*font: xft:M+1mn:size=12
+*barFont: xft:M+1mn:size=12
+*iconFont: xft:FontAwesome:size=12
+
+!font rendering
+Xft.antialias: true
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: none
+Xft.rgba: rgba
+
+URxvt.scrollBar: false
+!URxvt.font: xft:nimbus mono:bold:size=9
+!URxvt.font: xft:nimbus mono:bold:size=8,-lucy-tewi2a-medium-r-normal--11-90-75-75-p-58-iso10646-1
+URxvt.font:xft:Inconsolata:bold:size=9
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+!URxvt.geometry: 120x55
+
+!extensions
+!URxvt.perl-ext-common: selection-to-clipboard
+URxvt.perl-ext-common: default,matcher,clipboard
+
+!notifications messages
+URxvt*iso14755: False
+
+
+! shortcuts
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste

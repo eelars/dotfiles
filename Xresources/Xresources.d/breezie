@@ -1,0 +1,39 @@
+! vim: ft=xdefaults
+! breeze - terminal colours based on the KDE Breeze palette
+
+URxvt*foreground:   #fcfcfc
+URxvt*background:   #232629
+URxvt*cursorColor:  #d1b217
+
+! black
+URxvt*color0:       #31363b
+URxvt*color8:       #4d4d4d
+
+! red
+URxvt*color1:       #ed2929
+URxvt*color9:       #ed1515
+
+!green
+URxvt*color2:       #21d96d
+URxvt*color10:      #0bd961
+
+!yellow
+URxvt*color3:       #fcc74c
+URxvt*color11:      #fde04b
+
+!blue
+URxvt*color4:       #3daee9
+URxvt*color12:      #3d95e9
+
+!magenta
+URxvt*color5:       #9847b5
+URxvt*color13:      #a94fc9
+
+!cyan
+URxvt*color6:       #1abc9c
+URxvt*color14:      #1cdc9a
+
+!white
+URxvt*color7:       #eff0f1
+URxvt*color15:      #fcfcfc
+

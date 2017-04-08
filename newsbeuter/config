@@ -1,0 +1,84 @@
+## newsbeuter configuration
+#
+browser "qutebrowser %u"
+#browser "[[ -n \"$( pgrep qutebrowser )\"  ]] && qutebrowser %u || w3m -M %u &> /dev/null "
+#html-renderer "w3m -dump -T text/html"
+
+auto-reload yes #si a 'yes', newsbeuter recharge vos flux à son démarrage
+reload-time 15 #recharge vos flux toutes les n minutes, ici n = 15
+notify-always no
+#notify-format "newsbeuter: %n articles non lus parmis %f flux"
+notify-format "newsbeuter: %n articles"
+#notify-program "/usr/bin/notify-send --icon=feed-subscribe"
+notify-program "/usr/bin/notify-send"
+#notify-program "/home/jerome/.scripts/notify_news.sh"
+
+bind-key SPACE open #Un exemple de raccourcis possible sur les commande interne de newsbeuter avec la touche SPACE
+show-read-feeds no
+show-read-articles no
+
+articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
+#feedlist-format     "%4i %n %11u %t"
+#feedlist-format     "%n %11u %t"
+feedlist-format     "%n %11u %T"
+feed-sort-order firsttag
+
+
+## <element>                 <fg>        <bg>         <attr>
+#color info                  white       blue       bold
+#color listnormal_unread     blue        default
+#color listfocus_unread      color141    default
+#color listfocus             color159    default
+#color listnormal            cyan        default
+#color article               white       default
+#
+##highlight feedlist    "^  *[0-9]+  *N  .*"    red    default
+##highlight articlelist "^  *[0-9]+  *N  .*"    red    default
+#highlight article "(^Feed:|^Title:|^Author:|^Link:|^Date:|^Podcast Download URL:)"    red default
+
+
+# colors
+#color background           color255 color0
+#color listnormal           color255 color0
+#color listfocus            color255 color88 bold
+#color listnormal_unread    color255 color0 bold
+#color listfocus_unread     color255 color88 bold
+#color info                 color255 color31
+#color article              color255 color0
+
+#color info                   color255    color235
+color info                   color255     default
+#color background             color255    color0
+color listnormal             cyan        default
+color listfocus              color159    default   bold
+color listnormal_unread      cyan        default
+color listfocus_unread       color159    default   bold
+color article                color255    default
+
+# highlights
+#highlight article "^(Fil|Titre|Lien|Date|Auteur|URL de téléchargement de Podcast):.*$" color31 color0
+highlight article "^(Fil|Titre|Lien|Date|Auteur|URL de téléchargement de Podcast):.*$" default color0
+#highlight article "https?://[^ ]+" color9 color0 protect
+#highlight article "http?://[^ ]+" color9 color0 protect
+
+
+
+
+
+#highlight feedlist    "^  *[0-9]+  *N  "                    color156 default
+#highlight articlelist "^  *[0-9]+  *N  "                    color156 default
+#highlight article     "(^Feed:.*|^Title:.*|^Author:.*)"     color75  default
+#highlight article     "(^Link:.*|^Date:.*)"                 color75  default
+#highlight article     "^Podcast Download URL:.*"            color71  default
+#highlight article     "^Links:"                             white    color240 underline
+#highlight article     "\\[[0-9][0-9]*\\]"                   color72  default  bold
+#highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
+#highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   color72  default  bold
+#highlight article     ":.*\\(link\\)$"                      color74  default
+#highlight article     ":.*\\(image\\)$"                     color74  default
+#highlight article     ":.*\\(embedded flash\\)$"            color74  default
+
+#color listnormal                                            white    default
+#color listfocus                                             default  color240
+#color info                                                  default  color240
+#color listfocus_unread                                      default  color240   bold

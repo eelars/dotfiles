@@ -1,0 +1,70 @@
+" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
+" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
+" you can find below.  If you wish to change any of those settings, you should
+" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
+" everytime an upgrade of the vim packages is performed.  It is recommended to
+" make changes after sourcing archlinux.vim since it alters the value of the
+" 'compatible' option.
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages.
+runtime! archlinux.vim
+
+" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
+" Or better yet, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
+" and configure vim to your own liking!
+
+" runtime path (essential!!)
+set rtp+=/etc/vim
+
+" pathogen
+execute pathogen#infect('bundle/{}', '/etc/vim/bundle/{}')
+filetype plugin indent on
+
+
+" airline
+let g:airline_theme="murmur"
+let g:airline_symbols = {}
+let g:airline_left_sep  = ''
+let g:airline_right_sep = ''
+set laststatus=2
+
+"syntax
+set nocompatible
+syn on
+
+"colors
+let g:rehash256 = 1
+"let g:solarized_termcolors=256
+set background=dark
+set t_Co=256
+colorscheme slate
+"colorscheme nova
+"colorscheme solarized
+"python
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
+"setlocal textwidth=80
+setlocal smarttab
+setlocal expandtab
+
+"mouse
+set mouse=v
+
+"xml
+au FileType xml setl sw=2 sts=2 et
+
+"yml
+au FileType yml setl sw=2 sts=2 et
+
+"show and remove spaces
+highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
+match NoSpacesEOL / \+$/
+autocmd BufWrite * silent! %s/[\r \t]\+$//
+
+" 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.*/
+
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
