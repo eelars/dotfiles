@@ -1,0 +1,12 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+#xsetroot -solid SkyBlue
+#hsetroot -solid "#0f96ac"
+nitrogen --restore &
+dunst &
+/home/jerome/.scripts/bar.sh | lemonbar -p -f 'Inconsolata:bold:size=8' &
+urxvtd -q -o -f
