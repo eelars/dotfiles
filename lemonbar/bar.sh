@@ -4,7 +4,7 @@
 # Fetch infos on your computer, and print them to stdout every second.
 
 clock() {
-    date '+%Y-%m-%d %H:%M'
+    date '+%d-%m-%Y %H:%M'
 }
 
 battery() {
@@ -46,7 +46,8 @@ while :; do
     buf="${buf} [$(groups)]   --  "
     buf="${buf} CPU: $(cpuload)% -"
     buf="${buf} RAM: $(memused) -"
-    buf="${buf} VOL: $(volume)"
+    buf="${buf} VOL: $(volume) "
+    buf="${buf} [$(clock)]"
 
     echo $buf
     # use `nowplaying scroll` to get a scrolling output!
