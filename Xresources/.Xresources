@@ -24,7 +24,7 @@ URxvt*keysym.End: \033[4~
 
 !extensions
 !URxvt.perl-ext-common: selection-to-clipboard
-URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.perl-ext-common: default,matcher,clipboard,resize-font
 
 !notifications messages
 URxvt*iso14755: False
@@ -33,3 +33,7 @@ URxvt*iso14755: False
 ! shortcuts
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+!URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.smaller: C--
+!URxvt.resize-font.bigger: C-Up
+URxvt.resize-font.bigger: C-=
