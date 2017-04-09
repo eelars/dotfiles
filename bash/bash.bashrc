@@ -35,7 +35,7 @@ export TERM="xterm-256color"
 export BROWSER="qutebrowser"
 
 # Java
-export JAVA_HOME="/opt/jvm/jdk1.8.0_112"
+export JAVA_HOME="/opt/jvm/jdk1.8.0_121"
 export MAVEN_OPTS="-Xms512m -Xmx2048m"
 
 # pyenv
