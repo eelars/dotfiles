@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Jolly</name>
+    <name>Real-milk</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -408,6 +408,9 @@
       </action>
     </keybind>
     <!-- maximize windows -->
+    <keybind key="W-m">
+      <action name="ToggleMaximizeFull"></action>
+    </keybind>
     <keybind key="W-a">
       <action name="MoveResizeTo">
         <x>1%</x>
