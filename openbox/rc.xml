@@ -409,7 +409,7 @@
     </keybind>
     <!-- maximize windows -->
     <keybind key="W-m">
-      <action name="ToggleMaximizeFull"></action>
+      <action name="ToggleMaximizeFull"/>
     </keybind>
     <keybind key="W-a">
       <action name="MoveResizeTo">
