@@ -187,13 +187,31 @@
   <item label="Reconfigure Openbox">
     <action name="Reconfigure" />
   </item>
-  <!--
-  <item label="Reconfigure Sxhkd">
-      <action name="Execute">
-        <command>kill -HUP $(pidof sxhkd)</command>
-      </action>
+</menu>
+
+<menu id="leave-menu" label="Leave">
+  <item label="Lock">
+    <action name="Execute">
+      <command>slock</command>
+    </action>
   </item>
-  -->
+  <item label="Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <item label="Reboot">
+    <action name="Execute">
+        <prompt>Are you sure?</prompt>
+        <command>systemctl reboot</command>
+    </action>
+  </item>
+  <item label="Shutdown">
+    <action name="Execute">
+        <prompt>Are you sure?</prompt>
+        <command>systemctl poweroff</command>
+    </action>
+  </item>
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
@@ -218,17 +236,7 @@
   <separator label="System" />
   <menu id="system-menu"/>
   <separator />
-  <item label="Log Out">
-    <action name="Exit">
-      <prompt>yes</prompt>
-    </action>
-  </item>
-  <item label="Shutdown">
-    <action name="Execute">
-        <prompt>Eteindre l'ordinateur?</prompt>
-        <command>systemctl poweroff</command>
-    </action>
-  </item>
+  <menu id="leave-menu"/>
 
 </menu>
 
