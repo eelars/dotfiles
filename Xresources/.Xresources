@@ -15,23 +15,23 @@ Xft.lcdfilter: none
 Xft.rgba: rgba
 
 URxvt.scrollBar: false
-!URxvt.font: xft:nimbus mono:bold:size=9
-!URxvt.font: xft:nimbus mono:bold:size=8,-lucy-tewi2a-medium-r-normal--11-90-75-75-p-58-iso10646-1
 URxvt.font:xft:Inconsolata:bold:size=9
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
-!URxvt.geometry: 120x55
 
 !extensions
-!URxvt.perl-ext-common: selection-to-clipboard
 URxvt.perl-ext-common: default,matcher,clipboard,resize-font
 
 !notifications messages
 URxvt*iso14755: False
 
-
 ! shortcuts
+! clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.resize-font.smaller: C-minus
-URxvt.resize-font.bigger: C-equal
+! resize-font
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-equal:      resize-font:bigger
+URxvt.keysym.C-plus:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
