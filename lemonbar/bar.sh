@@ -4,7 +4,7 @@
 # Fetch infos on your computer, and print them to stdout every second.
 
 clock() {
-    date '+%d-%m-%Y %H:%M'
+    date '+%d-%m-%y %H:%M'
 }
 
 battery() {
@@ -48,7 +48,6 @@ while :; do
     buf="${buf} RAM: $(memused) -"
     buf="${buf} VOL: $(volume) "
     buf="${buf} [$(clock)]"
-
     echo $buf
     # use `nowplaying scroll` to get a scrolling output!
     sleep 2 # The HUD will be updated every second
