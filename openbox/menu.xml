@@ -155,7 +155,7 @@
   </item>
 </menu>
 
-<menu id="system-menu" label="System">
+<menu id="system-menu" label="system">
   <item label="Openbox Configuration Manager">
     <action name="Execute">
       <command>obconf</command>
@@ -189,7 +189,7 @@
   </item>
 </menu>
 
-<menu id="leave-menu" label="Leave">
+<menu id="leave-menu" label="power">
   <item label="Lock">
     <action name="Execute">
       <command>slock</command>
@@ -215,7 +215,7 @@
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
-  <separator label="Applications" />
+  <!-- <separator label="Applications" /> -->
   <item label="term">
     <action name="Execute">
       <command>urxvtc</command>
@@ -226,7 +226,14 @@
       <command>dolphin</command>
     </action>
   </item>
+  <item label="qutebrowser">
+    <action name="Execute">
+      <command>qutebrowser</command>
+    </action>
+  </item>
+
   <separator />
+  <!--
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
   <menu id="apps-graphics-menu"/>
@@ -234,6 +241,7 @@
   <menu id="apps-office-menu"/>
   <menu id="apps-multimedia-menu"/>
   <separator label="System" />
+  -->
   <menu id="system-menu"/>
   <separator />
   <menu id="leave-menu"/>
