@@ -19,6 +19,9 @@ URxvt.font:xft:Inconsolata:bold:size=9
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
+URxvt.url-launcher: /usr/bin/qutebrowser
+URxvt.matcher.button: 1
+
 !extensions
 URxvt.perl-ext-common: default,matcher,clipboard,resize-font
 
