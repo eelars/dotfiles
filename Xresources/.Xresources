@@ -6,6 +6,10 @@ Xft.dpi: 96
 *barFont: xft:M+1mn:size=12
 *iconFont: xft:FontAwesome:size=12
 
+!cursor
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: true
+
 !font rendering
 Xft.antialias: true
 Xft.autohint: false
