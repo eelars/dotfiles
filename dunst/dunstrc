@@ -24,7 +24,7 @@
     format = "<b>%s</b>\n%b"
 
     # Sort messages by urgency.
-    sort = yes
+    sort = no
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -136,7 +136,7 @@
     startup_notification = false
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/dmenu -fn Inconsolata:bold:size=9 -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/qutebrowser
@@ -167,10 +167,10 @@
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1".
-    history = ctrl+grave
+    history = ctrl+exclam
 
     # Context menu.
-    context = ctrl+shift+period
+    context = ctrl+shift+less
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
