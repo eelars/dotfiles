@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 <menu id="system-menu" label="system">
-  <item label="Openbox Configuration Manager">
+  <item label="obconf">
     <action name="Execute">
       <command>obconf</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
-  <item label="Kde System Settings">
+  <item label="systemsettings5">
     <action name="Execute">
       <command>systemsettings5</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
   <separator />
-  <item label="Reconfigure Openbox">
+  <item label="reconfigure openbox">
     <action name="Reconfigure" />
   </item>
 </menu>
 
 <menu id="leave-menu" label="power">
-  <item label="Lock">
+  <item label="lock">
     <action name="Execute">
       <command>slock</command>
     </action>
   </item>
-  <item label="Log Out">
+  <item label="log out">
     <action name="Exit">
       <prompt>yes</prompt>
     </action>
   </item>
-  <item label="Reboot">
+  <item label="reboot">
     <action name="Execute">
         <prompt>Are you sure?</prompt>
         <command>systemctl reboot</command>
     </action>
   </item>
-  <item label="Shutdown">
+  <item label="shutdown">
     <action name="Execute">
         <prompt>Are you sure?</prompt>
         <command>systemctl poweroff</command>
