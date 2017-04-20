@@ -42,15 +42,16 @@ groups() {
 
 # This loop will fill a buffer with our infos, and output it to stdout.
 while :; do
-    buf="%{r %{#dedede}"
-    buf="${buf} [$(groups)]   --  "
+    buf="%{l %{#dedede}"
+    buf="${buf} [$(groups)]"
+    buf="${buf} %{c}"
     buf="${buf} CPU: $(cpuload)% -"
     buf="${buf} RAM: $(memused) -"
-    buf="${buf} VOL: $(volume) "
-    buf="${buf} [$(clock)]"
+    buf="${buf} VOL: $(volume)"
+    buf="${buf} %{r}"
+    buf="${buf} $(clock)"
     echo $buf
-    # use `nowplaying scroll` to get a scrolling output!
-    sleep 2 # The HUD will be updated every second
+    sleep 2
 done
 
 
