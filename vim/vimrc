@@ -17,16 +17,14 @@ runtime! archlinux.vim
 " runtime path (essential!!)
 set rtp+=/etc/vim
 
-" pathogen
+"pathogen
 execute pathogen#infect('bundle/{}', '/etc/vim/bundle/{}')
 filetype plugin indent on
 
-
-" airline
-let g:airline_theme="murmur"
-let g:airline_symbols = {}
-let g:airline_left_sep  = ''
-let g:airline_right_sep = ''
+"lightline
+let g:lightline = {
+\ 'colorscheme': 'seoul256',
+\ }
 set laststatus=2
 
 "syntax
@@ -35,12 +33,9 @@ syn on
 
 "colors
 let g:rehash256 = 1
-"let g:solarized_termcolors=256
 set background=dark
 set t_Co=256
 colorscheme slate
-"colorscheme nova
-"colorscheme solarized
 "python
 setlocal tabstop=4
 setlocal softtabstop=4
@@ -63,7 +58,7 @@ highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
 match NoSpacesEOL / \+$/
 autocmd BufWrite * silent! %s/[\r \t]\+$//
 
-" 80 chars
+"80 chars
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.*/
 
