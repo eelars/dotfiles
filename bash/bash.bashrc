@@ -26,6 +26,7 @@ alias cam="mplayer -tv driver=v4l2:width=320:height=240: -vo xv tv:// -geometry 
 alias diff="diff --color"
 alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
+alias chromium="chromium -incognito"
 
 # env
 export EDITOR="vim"
@@ -35,7 +36,7 @@ export TERM="xterm-256color"
 export BROWSER="qutebrowser"
 
 # Java
-export JAVA_HOME="/opt/jvm/jdk1.8.0_121"
+export JAVA_HOME="/opt/jvm/jdk1.8.0_131"
 export MAVEN_OPTS="-Xms512m -Xmx2048m"
 
 # pyenv
