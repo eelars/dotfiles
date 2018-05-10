@@ -27,16 +27,19 @@ alias diff="diff --color"
 alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
 alias chromium="chromium -incognito"
+#alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
+alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe'
+
 
 # env
 export EDITOR="vim"
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/games
 export PAGER="less -s"
 export TERM="xterm-256color"
-export BROWSER="qutebrowser"
+export BROWSER="firefox"
 
 # Java
-export JAVA_HOME="/opt/jvm/jdk1.8.0_131"
+export JAVA_HOME="/opt/jvm/jdk-9.0.1"
 export MAVEN_OPTS="-Xms512m -Xmx2048m"
 
 # pyenv
@@ -66,7 +69,7 @@ PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${COL})\] \342\226\270 \[$(
 export OOO_FORCE_DESKTOP=kde
 
 # nouveau (qtwebengine problem)
-export LIBGL_ALWAYS_SOFTWARE=1
+#export LIBGL_ALWAYS_SOFTWARE=1
 
 # tmux
 settitle() {
