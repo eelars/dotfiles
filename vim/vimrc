@@ -22,10 +22,25 @@ execute pathogen#infect('bundle/{}', '/etc/vim/bundle/{}')
 filetype plugin indent on
 
 "lightline
-let g:lightline = {
-\ 'colorscheme': 'seoul256',
-\ }
 set laststatus=2
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename' ] ],
+      \ },
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ 'colorscheme': 'seoul256',
+      \ }
+
+function! LightlineFilename()
+  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+  let modified = &modified ? ' +' : ''
+  return filename . modified
+endfunction
+
+
 
 "syntax
 set nocompatible
@@ -36,13 +51,15 @@ let g:rehash256 = 1
 set background=dark
 set t_Co=256
 colorscheme slate
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'dark'
 "python
-setlocal tabstop=4
-setlocal softtabstop=4
-setlocal shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 "setlocal textwidth=80
-setlocal smarttab
-setlocal expandtab
+set smarttab
+set expandtab
 
 "mouse
 set mouse=v
@@ -62,4 +79,5 @@ autocmd BufWrite * silent! %s/[\r \t]\+$//
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.*/
 
-set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+set noshowmode
+
