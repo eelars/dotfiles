@@ -18,7 +18,8 @@ alias psa='ps -aux'
 alias pyra2="source /home/jerome/documents/dev/venvs/pyra2/bin/activate"
 alias pyra3="source /home/jerome/documents/dev/venvs/pyra3/bin/activate"
 alias django="source /home/jerome/documents/dev/venvs/django/bin/activate"
-alias ya="yaourt -Syu --aur"
+alias pyenvactivate="source /home/jerome/.scripts/pyenvactivate.sh"
+alias aur="aurman -Syu"
 alias yt="youtube-dl"
 alias ytaudio="youtube-dl -citk  --extract-audio --audio-format mp3"
 alias rec="ffmpeg -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
@@ -29,7 +30,6 @@ alias decrypt-local="gpg2 --decrypt"
 alias chromium="chromium -incognito"
 #alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe'
-
 
 # env
 export EDITOR="vim"
@@ -65,11 +65,9 @@ fi
 
 PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${COL})\] \342\226\270 \[$(tput sgr0)\]'
 
+
 # libreoffice
 export OOO_FORCE_DESKTOP=kde
-
-# nouveau (qtwebengine problem)
-#export LIBGL_ALWAYS_SOFTWARE=1
 
 # tmux
 settitle() {
@@ -82,5 +80,3 @@ ssh() {
   command ssh "$@"
   settitle "bash"
 }
-
-
