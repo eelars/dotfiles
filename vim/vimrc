@@ -31,7 +31,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'OldHope',
       \ }
 
 function! LightlineFilename()
@@ -39,8 +39,6 @@ function! LightlineFilename()
   let modified = &modified ? ' +' : ''
   return filename . modified
 endfunction
-
-
 
 "syntax
 set nocompatible
@@ -51,8 +49,7 @@ let g:rehash256 = 1
 set background=dark
 set t_Co=256
 colorscheme slate
-"colorscheme gruvbox
-"let g:gruvbox_contrast_dark = 'dark'
+
 "python
 set tabstop=4
 set softtabstop=4
@@ -80,4 +77,3 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.*/
 
 set noshowmode
-
