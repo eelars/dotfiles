@@ -31,6 +31,8 @@ alias chromium="chromium -incognito"
 #alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe'
 
+alias borgbackup='borg create --stats --encryption lz4 --progress'
+
 # env
 export EDITOR="vim"
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/games
@@ -41,12 +43,6 @@ export BROWSER="firefox"
 # Java
 export JAVA_HOME="/opt/jvm/jdk-9.0.1"
 export MAVEN_OPTS="-Xms512m -Xmx2048m"
-
-# pyenv
-#export PYENV_ROOT="/home/jerome/documents/dev/.pyenv"
-#eval "$(pyenv init -)"
-
-# Env
 export PATH=$JAVA_HOME/bin:$PATH
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JAVA_HOME/lib"
 
