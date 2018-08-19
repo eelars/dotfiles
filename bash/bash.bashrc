@@ -28,10 +28,8 @@ alias diff="diff --color"
 alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
 alias chromium="chromium -incognito"
-#alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe'
-
-alias borgbackup='borg create --stats --encryption lz4 --progress'
+alias backup="sudo borgmatic --verbosity 2"
 
 # env
 export EDITOR="vim"
