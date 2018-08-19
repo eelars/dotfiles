@@ -19,4 +19,4 @@ color listnormal_unread      color10     color0
 color listfocus_unread       color159    color0  bold
 color article                color255    color0
 
-
+cookie-cache "~/.config/newsboat/cookies.txt"
