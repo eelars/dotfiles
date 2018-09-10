@@ -19,7 +19,6 @@ alias pyra2="source /home/jerome/documents/dev/venvs/pyra2/bin/activate"
 alias pyra3="source /home/jerome/documents/dev/venvs/pyra3/bin/activate"
 alias django="source /home/jerome/documents/dev/venvs/django/bin/activate"
 alias pyenvactivate="source /home/jerome/.scripts/pyenvactivate.sh"
-alias aur="aurman -Syu"
 alias yt="youtube-dl"
 alias ytaudio="youtube-dl -citk  --extract-audio --audio-format mp3"
 alias rec="ffmpeg -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
@@ -39,7 +38,7 @@ export TERM="xterm-256color"
 export BROWSER="firefox"
 
 # Java
-export JAVA_HOME="/opt/jvm/jdk-9.0.1"
+export JAVA_HOME="/opt/jvm/jdk-10.0.2"
 export MAVEN_OPTS="-Xms512m -Xmx2048m"
 export PATH=$JAVA_HOME/bin:$PATH
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JAVA_HOME/lib"
