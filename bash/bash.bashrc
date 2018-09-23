@@ -56,7 +56,13 @@ else
   COL=10
 fi
 
-PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${COL})\] \342\226\270 \[$(tput sgr0)\]'
+WHITE=7
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${WHITE})\]$(parse_git_branch) \[$(tput setaf ${COL})\]\342\226\270 \[$(tput sgr0)\]'
 
 
 # libreoffice
