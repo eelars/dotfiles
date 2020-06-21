@@ -21,7 +21,8 @@ alias steam-wine 'WINEDEBUG -all wine ~/.wine/drive_c/Program\ Files/Steam/Steam
 alias backup "sudo borgmatic --verbosity 1"
 
 # env
-set EDITOR "vim"
+set EDITOR vim
+set VISUAL vim
 set PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/games
 set PAGER "less -s"
 set TERM "xterm-256color"
