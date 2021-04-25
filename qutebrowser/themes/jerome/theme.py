@@ -5,9 +5,11 @@ I just simplified and changed some stuffs
 """
 
 colors = {
-    'background': '#282a36',
+    'background': '#31363b',
     'background-alt': '#282a36',
     'background-attention': '#181920',
+    'background-private': '#b22cff',
+    'forground-private': '#ffffff',
     'border': '#282a36',
     'current-line': '#44475a',
     'selection': '#44475a',
@@ -81,7 +83,7 @@ c.colors.statusbar.caret.selection.bg = colors['background']
 c.colors.statusbar.caret.selection.fg = colors['orange']
 c.colors.statusbar.command.bg = colors['background']
 c.colors.statusbar.command.fg = colors['pink']
-c.colors.statusbar.command.private.bg = colors['background']
+c.colors.statusbar.command.private.bg = colors['background-private']
 c.colors.statusbar.command.private.fg = colors['foreground-alt']
 c.colors.statusbar.insert.bg = colors['green']
 c.colors.statusbar.insert.fg = colors['background']
@@ -89,7 +91,7 @@ c.colors.statusbar.normal.bg = colors['background']
 c.colors.statusbar.normal.fg = colors['foreground']
 c.colors.statusbar.passthrough.bg = colors['background']
 c.colors.statusbar.passthrough.fg = colors['orange']
-c.colors.statusbar.private.bg = colors['background-alt']
+c.colors.statusbar.private.bg = colors['background-private']
 c.colors.statusbar.private.fg = colors['foreground-alt']
 c.colors.statusbar.progress.bg = colors['background']
 c.colors.statusbar.url.error.fg = colors['red']
