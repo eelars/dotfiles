@@ -1,7 +1,9 @@
 # newsboat configuration
 #browser "firefox --private-window %u"
 #browser "falkon -i -t"
-browser "qutebrowser --target tab-bg-silent %u"
+#browser "qutebrowser --target tab-bg-silent %u"
+browser "brave --incognito  %u"
+#open-in-browser-noninteractively yes
 auto-reload yes
 reload-time 15
 notify-always no
@@ -19,6 +21,8 @@ color listfocus              color159    color0  bold
 color listnormal_unread      color10     color0
 color listfocus_unread       color159    color0  bold
 color article                color255    color0
+
+keep-articles-days 30
 
 bind-key f open-all-unread-in-browser
 
