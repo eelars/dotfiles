@@ -31,7 +31,7 @@ alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
 alias chromium="chromium -incognito"
 alias steam-wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe'
-alias backup="sudo borgmatic --verbosity 1"
+alias backup="sudo borgmatic --verbosity 1 --files"
 
 # env
 export EDITOR="vim"
@@ -70,7 +70,8 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${WHITE})\]$(parse_git_branch) \[$(tput setaf ${COL})\]\342\226\270 \[$(tput sgr0)\]'
+#PS1='\[$(tput setaf ${COL})\]\u@\h: \W\[$(tput setaf ${WHITE})\]$(parse_git_branch) \[$(tput setaf ${COL})\]\342\226\270 \[$(tput sgr0)\]'
+PS1='\[$(tput setaf ${COL})\]\u\[$(tput setaf ${WHITE})\]@\h: \W\[$(tput setaf ${WHITE})\]$(parse_git_branch) \[$(tput setaf ${COL})\]\342\226\270 \[$(tput sgr0)\]'
 
 
 # libreoffice
