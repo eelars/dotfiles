@@ -1191,6 +1191,7 @@ c.content.notifications = False
 ##   - tab-bg-silent: Open a new background tab in the existing window without activating the window.
 ##   - window: Open in a new window.
 # c.new_instance_open_target = 'tab'
+c.new_instance_open_target = 'tab-bg-silent'
 
 ## Which window to choose when opening links as new tabs. When
 ## `new_instance_open_target` is set to `window`, this is ignored.
@@ -1201,6 +1202,7 @@ c.content.notifications = False
 ##   - last-focused: Open new tabs in the most recently focused window.
 ##   - last-visible: Open new tabs in the most recently visible window.
 # c.new_instance_open_target_window = 'last-focused'
+c.new_instance_open_target_window = 'last-opened'
 
 ## Show a filebrowser in upload/download prompts.
 ## Type: Bool
@@ -1388,6 +1390,7 @@ c.spellcheck.languages = ['fr-FR']
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
 # c.tabs.background = False
+c.tabs.background = True
 
 ## Mouse button with which to close tabs.
 ## Type: String
