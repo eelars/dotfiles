@@ -1,0 +1,43 @@
+call plug#begin()
+Plug 'arcticicestudio/nord-vim', {'tag': 'v0.11.0'}
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+"lightline
+set laststatus=2
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
+
+
+"syntax
+set nocompatible
+syn on
+
+"colors
+let g:rehash256 = 1
+set background=dark
+set t_Co=256
+colorscheme nord
+
+"indent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+"setlocal textwidth=80
+set smarttab
+set expandtab
+
+"mouse
+set mouse=v
+
+"python
+au FileType python setlocal ts=4 sts=4 sw=4 expandtab smarttab
+
+
+"show and remove spaces
+highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
+match NoSpacesEOL / \+$/
+autocmd BufWrite * silent! %s/[\r \t]\+$//
+
+set noshowmode

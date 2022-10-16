@@ -1,0 +1,36 @@
+# newsboat configuration
+#browser "firefox --private-window %u > /dev/null 2>&1"
+#browser "qutebrowser --target tab-bg-silent %u"
+#browser "qutebrowser --target private-window %u"
+#browser "brave --incognito %u > /dev/null 2>&1"
+#browser "chromium --incognito %u > /dev/null 2>&1"
+browser "/usr/local/bin/firefox --private-window %u"
+prepopulate-query-feeds yes
+auto-reload yes
+reload-time 15
+notify-always no
+notify-format "newsboat: %n articles"
+notify-program "/usr/bin/notify-send"
+bind-key SPACE open
+bind-key s up
+bind-key d down
+bind-key e open
+unbind-key f
+bind-key f open-in-browser
+show-read-feeds no
+show-read-articles no
+articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
+feedlist-format     "%n %11u %T"
+feed-sort-order firsttag
+color info                   color255     color0
+color listnormal             color12     color0
+color listfocus              color159    color0  bold
+color listnormal_unread      color12     color0
+color listfocus_unread       color159    color0  bold
+color article                color255    color0
+
+keep-articles-days 30
+
+bind-key f open-all-unread-in-browser
+
+cookie-cache "~/.config/newsboat/cookies.txt"
