@@ -1,9 +1,4 @@
 # newsboat configuration
-#browser "firefox --private-window %u > /dev/null 2>&1"
-#browser "qutebrowser --target tab-bg-silent %u"
-#browser "qutebrowser --target private-window %u"
-#browser "brave --incognito %u > /dev/null 2>&1"
-#browser "chromium --incognito %u > /dev/null 2>&1"
 browser "/usr/local/bin/firefox --private-window %u"
 prepopulate-query-feeds yes
 auto-reload yes
