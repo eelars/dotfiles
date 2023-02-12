@@ -19,6 +19,9 @@ alias pyra3="source /home/jerome/Documents/dev/venvs/pyra3/bin/activate"
 #alias cam="mplayer -tv driver=v4l2:width=320:height=240: -vo xv tv:// -geometry '99%:90%' -ontop"
 alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
+alias fwr="sudo fwupdmgr refresh"
+alias fwu="sudo fwupdmgr update"
+
 
 # env
 export EDITOR="vim"
@@ -26,6 +29,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PAGER="less -s"
 export TERM="xterm-256color"
 export BROWSER="firefox"
+export MOZ_ENABLE_WAYLAND=1
 export OOO_FORCE_DESKTOP=kde
 
 # java
