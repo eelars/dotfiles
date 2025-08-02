@@ -6,14 +6,16 @@
 #[[ $- != *i* ]] && return
 
 # alias
-alias ls='ls --color'
+#alias ls='lsd'
 alias diff="diff --color"
 alias backup="sudo borgmatic --verbosity 1 --files"
-alias vim="rvim"
-alias vi="rvim"
+alias diff="colordiff"
+alias vim="vim"
+alias vi="vim"
+alias rboy="~/Documents/dev/rboy/target/release/rboy -a"
 alias brave="brave -incognito"
-alias yt="yt-dlp"
-alias ytaudio="yt-dlp -c -x -o \"%(playlist_title)s - %(playlist_index)s - %(title)s.%(ext)s\" --embed-thumbnail --audio-format mp3 --parse-metadata \"title:%(artist)s - %(title)s\""
+alias yt=" /usr/bin/yt-dlp"
+alias ytaudio="/usr/bin/yt-dlp -c -x -o \"%(playlist_title)s - %(playlist_index)s - %(title)s.%(ext)s\" --embed-thumbnail --audio-format mp3 --parse-metadata \"title:%(artist)s - %(title)s\""
 alias pyra3="source /home/jerome/Documents/dev/venvs/pyra3/bin/activate"
 #alias rec="ffmpeg -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
 #alias cam="mplayer -tv driver=v4l2:width=320:height=240: -vo xv tv:// -geometry '99%:90%' -ontop"
@@ -21,7 +23,10 @@ alias encrypt-local="gpg2 -c --cipher-algo twofish --s2k-digest-algo SHA512"
 alias decrypt-local="gpg2 --decrypt"
 alias fwr="sudo fwupdmgr refresh"
 alias fwu="sudo fwupdmgr update"
-
+alias C="/usr/bin/clear"
+alias A="aura -Syu"
+alias Y="yay"
+alias BAT="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
 # env
 export EDITOR="vim"
@@ -41,6 +46,11 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JAVA_HOME/lib"
 # nodejs
 export PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
+
+# pyenv
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 # completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
@@ -74,10 +84,10 @@ settitle() {
 }
 
 ssh() {
-  title=$(echo "$*" | cut -d@ -f2)
-  settitle $title
-  command ssh "$@"
-  settitle "bash"
+    host=$(echo $* | cut -d '@' -f 2)
+    tmux rename-window "$host"
+    settitle "$host"
+    command ssh "$@"
 }
 
 if [ -z "$TMUX" ]; then

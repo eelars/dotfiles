@@ -23,6 +23,7 @@ color listfocus              color159    color0  bold
 color listnormal_unread      color12     color0
 color listfocus_unread       color159    color0  bold
 color article                color255    color0
+cleanup-on-quit yes
 
 keep-articles-days 30
 

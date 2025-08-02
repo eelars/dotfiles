@@ -1,14 +1,27 @@
 call plug#begin()
 Plug 'arcticicestudio/nord-vim', {'tag': 'v0.11.0'}
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tmhedberg/SimpylFold'
+Plug 'nvie/vim-flake8'
+Plug 'morhetz/gruvbox'
+"Plug 'rust-lang/rust.vim'
+Plug 'cocopon/iceberg.vim'
+"Plug 'preservim/vim-indent-guides'
 call plug#end()
 
 "lightline
 set laststatus=2
 let g:lightline = {
   \ 'colorscheme': 'wombat',
+  \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
   \ }
-
 
 "syntax
 set nocompatible
@@ -18,7 +31,12 @@ syn on
 let g:rehash256 = 1
 set background=dark
 set t_Co=256
-colorscheme nord
+"colorscheme gruvbox
+colorscheme slate
+"colorscheme iceberg
+"visual color selection
+"hi Visual guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
+highlight Visual cterm=bold ctermbg=grey ctermfg=NONE
 
 "indent
 set tabstop=2
@@ -32,8 +50,20 @@ set expandtab
 set mouse=v
 
 "python
-au FileType python setlocal ts=4 sts=4 sw=4 expandtab smarttab
+"au FileType python setlocal ts=4 sts=4 sw=4 expandtab smarttab
+au BufNewFile,BufRead *.py setlocal ts=4  sts=4 sw=4 expandtab autoindent fileformat=unix
 
+
+"json & yml
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+"yml linting
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
 
 "show and remove spaces
 highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
@@ -41,3 +71,12 @@ match NoSpacesEOL / \+$/
 autocmd BufWrite * silent! %s/[\r \t]\+$//
 
 set noshowmode
+
+" folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+let g:SimpylFold_docstring_preview=1
+
+" guides
+set list listchars=tab:»-,trail:·,extends:»,precedes:«
