@@ -31,8 +31,8 @@ syn on
 let g:rehash256 = 1
 set background=dark
 set t_Co=256
-"colorscheme gruvbox
-colorscheme slate
+colorscheme gruvbox
+"colorscheme slate
 "colorscheme iceberg
 "visual color selection
 "hi Visual guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
@@ -80,3 +80,6 @@ let g:SimpylFold_docstring_preview=1
 
 " guides
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
+
+" force background color
+hi Normal ctermbg=black
