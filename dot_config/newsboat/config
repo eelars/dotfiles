@@ -17,16 +17,14 @@ show-read-articles no
 articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
 feedlist-format     "%n %11u %T"
 feed-sort-order firsttag
-color info                   color255     color0
-color listnormal             color12     color0
-color listfocus              color159    color0  bold
-color listnormal_unread      color12     color0
-color listfocus_unread       color159    color0  bold
-color article                color255    color0
+# colors
+color info                   color255     default
+color listnormal             color12     default
+color listfocus              color159    default  bold
+color listnormal_unread      color12     default
+color listfocus_unread       color159    default  bold
+color article                color255    default
+
 cleanup-on-quit yes
-
 keep-articles-days 30
-
-bind-key f open-all-unread-in-browser
-
 cookie-cache "~/.config/newsboat/cookies.txt"

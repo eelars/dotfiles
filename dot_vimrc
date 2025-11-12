@@ -13,7 +13,7 @@ call plug#end()
 "lightline
 set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'wombat',
+  \ 'colorscheme': 'nord',
   \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -29,9 +29,10 @@ syn on
 
 "colors
 let g:rehash256 = 1
-set background=dark
+set background=light
 set t_Co=256
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme nord
 "colorscheme slate
 "colorscheme iceberg
 "visual color selection
@@ -82,4 +83,4 @@ let g:SimpylFold_docstring_preview=1
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
 " force background color
-hi Normal ctermbg=black
+"hi Normal ctermbg=black
